@@ -6,4 +6,4 @@ class Conan(ConanFile):
     generators = "cmake"
 
     def requirements(self):
-        self.requires.add("sdl2/2.0.8@stever/stable")
+        self.requires.add("sdl2/2.0.9@stever/test_patch")
