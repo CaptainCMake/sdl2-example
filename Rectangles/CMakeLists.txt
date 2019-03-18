@@ -17,6 +17,7 @@ set_target_properties(${target_name}
     PROPERTIES
     MACOSX_BUNDLE TRUE
     WIN32_EXECUTABLE TRUE
+    LINKER_LANGUAGE CXX
 )
 
 install_executable(${target_name})
