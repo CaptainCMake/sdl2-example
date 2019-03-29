@@ -8,7 +8,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "hidapi.h"
 
 #define SCREEN_WIDTH 320
 #define SCREEN_HEIGHT 480
@@ -58,14 +57,14 @@ main(int argc, char *argv[])
     int done;
     SDL_Event event;
 
-    if (hid_init() < 0) {
-        SDL_SetError("Couldn't initialize hidapi");
-        return -1;
+    if (SDL_Init(SDL_INIT_JOYSTICK) < 0) {
+        printf("Could not initialize SDL Joystick\n");
+        return 1;
     }
 
     /* initialize SDL */
     if (SDL_Init(SDL_INIT_VIDEO) < 0) {
-        printf("Could not initialize SDL\n");
+        printf("Could not initialize SDL Video\n");
         return 1;
     }
 
