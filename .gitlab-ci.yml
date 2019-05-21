@@ -5,6 +5,7 @@ stages:
   - build
 
 before_script:
+  - exit 1
   - cmake --version
   - conan --version
   - conan remote add conan https://api.bintray.com/conan/stever/conan
