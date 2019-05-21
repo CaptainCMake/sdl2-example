@@ -70,7 +70,7 @@ mac:
     - mac
 
 windows:
-  image: mcr.microsoft.com/windows/servercore:1809
+  image: mcr.microsoft.com/windows/servercore:1809_amd64
   stage: build
   script:
     - call build_windows.bat
