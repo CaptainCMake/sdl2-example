@@ -70,6 +70,7 @@ mac:
     - mac
 
 windows:
+  image: mcr.microsoft.com/windows/servercore:1809
   stage: build
   script:
     - call build_windows.bat
@@ -77,4 +78,4 @@ windows:
     paths:
       - build_windows/_package/*.zip
   tags:
-    - windows
+    - windows-docker
