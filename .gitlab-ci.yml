@@ -71,7 +71,7 @@ mac:
     - mac
 
 windows:
-  image: mcr.microsoft.com/windows/servercore:1809_amd64
+  image: registry.gitlab.com/ssrobins/docker-windows-build:latest
   stage: build
   script:
     - call build_windows.bat
