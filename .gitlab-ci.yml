@@ -13,6 +13,7 @@ windows:
   image: docker-windows-build:latest
   stage: build
   script:
+    - (Get-WMIObject Win32_PhysicalMemory | Measure-Object Capacity -Sum).sum/1GB
     - cmd.exe /c build_windows.bat
   artifacts:
     paths:
