@@ -8,6 +8,7 @@ before_script:
   - cmake --version
   - conan --version
   - conan remote add conan https://api.bintray.com/conan/stever/conan
+  - dir
 
 windows:
   image: docker-windows-build:latest
