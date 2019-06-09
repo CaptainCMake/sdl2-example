@@ -70,7 +70,7 @@ mac:
     - mac
 
 windows:
-  image: registry.gitlab.com/ssrobins/docker-windows-build:latest
+  image: docker-windows-build:latest
   stage: build
   script:
     - call build_windows.bat
