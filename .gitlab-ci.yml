@@ -13,7 +13,7 @@ windows:
   image: docker-windows-build:latest
   stage: build
   script:
-    - .\build_windows.bat
+    - cmd.exe /c build_windows.bat
   artifacts:
     paths:
       - build_windows/_package/*.zip
