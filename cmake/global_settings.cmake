@@ -40,7 +40,7 @@ if(MSVC)
         /sdl # Enable additional security checks
         /WX # Warning as error
         $<$<CONFIG:Debug>:/ZI> # Produces a program database (PDB) that supports edit and continue
-        $<$<CONFIG:Release>:/Zi> # Produces a program database (PDB)
+        #$<$<CONFIG:Release>:/Zi> # Produces a program database (PDB)
     )
 
     add_link_options(
