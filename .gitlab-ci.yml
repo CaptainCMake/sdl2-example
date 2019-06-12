@@ -14,7 +14,7 @@ windows:
   image: docker-windows-build:latest
   stage: build
   script:
-    - dir
+    - cd C:\
     - git clone https://gitlab.com/ssrobins/sdl2-example.git
     - cd sdl2-example
     - .\build_windows.bat
