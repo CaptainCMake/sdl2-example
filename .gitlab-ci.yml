@@ -1,6 +1,5 @@
 variables:
   GIT_STRATEGY: none
-  CONAN_USER_HOME: "$CI_PROJECT_DIR"
 
 stages:
   - build
@@ -14,9 +13,7 @@ windows:
   image: docker-windows-build:latest
   stage: build
   script:
-    - cd C:\
-    - git clone https://gitlab.com/ssrobins/sdl2-example.git
-    - cd sdl2-example
+    - dir
     - .\build_windows.bat
   artifacts:
     paths:
