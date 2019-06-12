@@ -1,5 +1,5 @@
 variables:
-  GIT_STRATEGY: none
+  CONAN_USER_HOME: "$CI_PROJECT_DIR"
 
 stages:
   - build
