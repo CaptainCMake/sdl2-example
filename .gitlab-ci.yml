@@ -14,6 +14,8 @@ windows:
   stage: build
   script:
     - dir
+    - Move-Item -Path C:\builds\ssrobins\sdl2-example -Destination C:\sdl2-example
+    - cd C:\sdl2-example
     - .\build_windows.bat
   artifacts:
     paths:
