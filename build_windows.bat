@@ -8,7 +8,7 @@ cd /d %build_path%
 if not exist %build_dir% mkdir %build_dir%
 cd %build_dir%
 
-dir
+set
 
 conan install %build_path% -s arch=x86 -s compiler.version=16 -s compiler.runtime=MT || goto :error
 
