@@ -16,7 +16,7 @@ systeminfo
 
 cmake -G "Visual Studio 16 2019" -A Win32 %CI_PROJECT_DIR% || goto :error
 
-cmake --build . --config Release --target PACKAGE -- /m || goto :error
+cmake --build %build_path% --config Release --target PACKAGE -- /m || goto :error
 
 :error
 exit /b %errorlevel%
