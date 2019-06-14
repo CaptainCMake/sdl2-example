@@ -10,11 +10,11 @@ cd %build_dir%
 
 set
 
-conan install %build_path% -s arch=x86 -s compiler.version=16 -s compiler.runtime=MT || goto :error
+conan install %CI_PROJECT_DIR% -s arch=x86 -s compiler.version=16 -s compiler.runtime=MT || goto :error
 
 systeminfo
 
-cmake -G "Visual Studio 16 2019" -A Win32 %build_path% || goto :error
+cmake -G "Visual Studio 16 2019" -A Win32 %CI_PROJECT_DIR% || goto :error
 
 cmake --build . --config Release --target PACKAGE -- /m || goto :error
 
