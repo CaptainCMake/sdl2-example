@@ -13,12 +13,7 @@ windows:
   image: docker-windows-build:latest
   stage: build
   script:
-    - cd C:\
-    - dir
-    - Copy-Item -Path C:\builds\ssrobins\sdl2-example -Destination C:\
-    - Start-Sleep -Seconds 30
-    - dir sdl2-example
-    - cmd.exe /C C:\sdl2-example\build_windows.bat
+    - .\build_windows.bat
   artifacts:
     paths:
       - build_windows/_package/*.zip

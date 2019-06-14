@@ -3,7 +3,7 @@ setlocal
 
 set build_dir=build_windows
 
-cd /d %~dp0
+cd /d C:\
 if not exist %build_dir% mkdir %build_dir%
 cd %build_dir%
 
