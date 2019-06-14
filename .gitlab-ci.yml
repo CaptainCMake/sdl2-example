@@ -17,7 +17,7 @@ windows:
     - dir
     - Copy-Item -Path C:\builds\ssrobins\sdl2-example -Destination C:\
     - dir
-    - C:\sdl2-example\build_windows.bat
+    - cmd.exe /C C:\sdl2-example\build_windows.bat
   artifacts:
     paths:
       - build_windows/_package/*.zip
