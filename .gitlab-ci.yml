@@ -16,6 +16,6 @@ windows:
     - .\build_windows.bat
   artifacts:
     paths:
-      - C:/build_windows/_package/*.zip
+      - C:\build_windows\_package\*.zip
   tags:
     - windows-docker
