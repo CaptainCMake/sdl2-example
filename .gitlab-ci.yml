@@ -10,7 +10,7 @@ before_script:
   - conan remote add conan https://api.bintray.com/conan/stever/conan
 
 windows:
-  docker-windows-build:latest
+  image: docker-windows-build:latest
   stage: build
   script:
     - .\build_windows.bat
