@@ -42,6 +42,9 @@ ios:
     - ./build_ios.sh
   tags:
     - ios
+  artifacts:
+    paths:
+      - build_ios/*.ipa
   except:
     variables:
       - $desktop_only == "true"
