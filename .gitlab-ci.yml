@@ -5,6 +5,7 @@ variables:
 
 stages:
   - build
+  - publish
 
 before_script:
   - cmake --version
@@ -48,6 +49,17 @@ ios:
   except:
     variables:
       - $desktop_only == "true"
+
+ios:
+  stage: publish
+  script:
+    - xcrun altool --upload-app --file build_ios/Rectangles.ipa --type ios --username ssrobins@gmail.com --password $APPLEID_PASSWORD
+  tags:
+    - ios
+  except:
+    variables:
+      - $desktop_only == "true"
+      - $publish == "true"
 
 linux:
   image: registry.gitlab.com/ssrobins/docker-linux-build:gcc9.2.0
