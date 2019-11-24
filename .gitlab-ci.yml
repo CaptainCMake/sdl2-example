@@ -19,7 +19,6 @@ before_script:
     - cat /proc/meminfo | grep MemTotal
     - java -version
     - ./build_$android_arch.sh
-    - cd build_$android_arch
   artifacts:
     paths:
       - build_$android_arch/_package/*.apk
