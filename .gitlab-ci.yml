@@ -50,7 +50,7 @@ ios:
     variables:
       - $desktop_only == "true"
 
-ios:
+ios-publish:
   stage: publish
   script:
     - xcrun altool --upload-app --file build_ios/Rectangles.ipa --type ios --username ssrobins@gmail.com --password $APPLEID_PASSWORD
