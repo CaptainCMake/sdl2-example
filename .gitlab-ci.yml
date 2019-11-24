@@ -59,6 +59,8 @@ ios-publish:
   except:
     variables:
       - $desktop_only == "true"
+  only:
+    variables:
       - $publish == "true"
 
 linux:
